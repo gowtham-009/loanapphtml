@@ -61,7 +61,7 @@
                 <div class="w-full mt-2">
                     <label for="user Id" class="text-md font-medium">User ID</label>
                     <div class=" grid grid-cols-1">
-                        <input id="userId" type="number" name="user Id" placeholder="Enter your email" readonly value="1234 "
+                        <input id="userId" type="number" name="user Id" placeholder="Enter your email" readonly  
                             class="col-start-1 row-start-1 border-2 border-gray-400 outline-none block w-full rounded-md bg-white py-1.5 pr-3 pl-10 text-base  placeholder:text-gray-400  sm:pl-9 sm:text-sm/6 dark:bg-[var(--color-bg)] " />
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
@@ -141,8 +141,10 @@
     </div>
 
     <script>
+        document.getElementById('userId').value='1234'
 
         const mainContainer = document.getElementById('mainContainer');
+
 
         const toggleBtn = document.getElementById('toggleDarkMode');
         const iconEl = document.getElementById('themeIcon');
