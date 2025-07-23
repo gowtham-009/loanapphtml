@@ -15,6 +15,13 @@
             overflow: hidden;
             /* Prevent body scroll */
         }
+
+
+        .num-btn.active {
+            background-color: #ec4899;
+            /* Tailwind's pink-500 */
+            color: white;
+        }
     </style>
 </head>
 
@@ -30,9 +37,9 @@
 
 
         </div>
-        <div class="w-2/5 box-2 p-1 px-5 ">
-            <div id="loginbox" class="w-full p-1">
-                <div class="flex items-center gap-4">
+        <div class="w-2/5 box-2">
+            <div id="loginbox" class="w-full">
+                <div class="flex items-center gap-4 px-2" style="height: 10vh;">
                     <!-- Star icon -->
                     <img src="./images/star.png" class="w-12 h-12" alt="">
 
@@ -49,7 +56,8 @@
                 </div>
 
 
-                <div class="w-full mt-2 flex gap-2 items-center">
+               <div class="w-full p-1 px-4">
+                     <div class="w-full mt-2 flex gap-2 items-center">
                     <p class="text-left font-bold text-2xl">Check you email</p>
                     <img src="./images/logstart.png" class="w-8 h-8" alt="">
                 </div>
@@ -69,32 +77,32 @@
                 </div>
 
                 <div class="w-full p-1 mt-2">
-                    <div class="w-full p-1 mt-2 grid grid-cols-3 gap-2">
+                    <div class="w-full p-1 mt-2 grid grid-cols-3 gap-2" id="keypad">
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">1</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">1</button>
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">2</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">2</button>
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">3</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">3</button>
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">4</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">4</button>
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">5</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">5</button>
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">6</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">6</button>
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">7</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">7</button>
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">8</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">8</button>
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">9</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">9</button>
 
                         <!-- Spacer -->
                         <div></div>
 
                         <!-- 0 -->
                         <button
-                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">0</button>
+                            class="num-btn bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500 py-3 rounded text-lg">0</button>
 
                         <!-- Backspace -->
                         <button id="backspaceBtn"
@@ -105,23 +113,14 @@
 
 
 
+
+
                 </div>
 
 
 
 
 
-
-
-
-
-                <div class="w-full mt-3">
-                    <button
-                        class="w-full rounded-lg bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 px-6 py-2 text-white text-lg font-medium hover:opacity-90 transition-opacity duration-300">
-                        Verify email
-                    </button>
-
-                </div>
 
                 <div class="w-full mt-3">
                     <p class="text-gray-500 font-normal text-md text-center">Didn't receive the email? <span
@@ -137,6 +136,18 @@
 
                     Back to Login
                 </button>
+
+
+                <div class="w-full mt-3">
+                    <button
+                        class="w-full rounded-lg bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 px-6 py-2 text-white text-lg font-medium hover:opacity-90 transition-opacity duration-300">
+                        Verify email
+                    </button>
+
+                </div>
+
+               </div>
+
 
             </div>
         </div>
@@ -264,8 +275,17 @@
             });
         });
 
-        function back(){
-            window.location.href='/'
+        const buttons = document.querySelectorAll(".num-btn");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                buttons.forEach(b => b.classList.remove("active")); // remove active from all
+                btn.classList.add("active"); // add active to clicked
+            });
+        });
+
+        function back() {
+            window.location.href = '/'
         }
     </script>
 </body>

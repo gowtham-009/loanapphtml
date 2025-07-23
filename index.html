@@ -23,45 +23,42 @@
 
     <div id="mainContainer" class="w-full overflow-hidden flex gap-2" style="position: relative;">
         <div class="w-3/5 h-screen box-1   flex justify-center items-center">
-
             <img src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
                 alt="" class="  size-full object-cover" />
-
-
-
         </div>
-        <div class="w-2/5 box-2 p-1 px-5 ">
-            <div id="loginbox" class="w-full p-1">
-               <div class="flex items-center gap-4">
-  <!-- Star icon -->
-  <img src="./images/star.png" class="w-12 h-12" alt="">
+        <div class="w-2/5 box-2 " >
+            <div id="loginbox" class="w-full">
+                <div class="flex items-center gap-4 px-2" style=" height: 10vh;">
+                    <!-- Star icon -->
+                    <img src="./images/star.png" class="w-12 h-12" alt="">
 
-  <!-- Horizontal line -->
-  <div class="flex-1 border-b-2 border-gray-300"></div>
+                    <!-- Horizontal line -->
+                    <div class="flex-1 border-b-2 border-gray-300"></div>
 
-  <!-- Dark mode toggle button -->
-  <button id="toggleDarkMode"
-    class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-800 text-yellow-500 dark:text-white shadow-md transition-all duration-300">
-    <svg id="themeIcon" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-      <!-- Icon will be injected here by JS -->
-    </svg>
-  </button>
-</div>
+                    <!-- Dark mode toggle button -->
+                    <button id="toggleDarkMode"
+                        class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-800 text-yellow-500 dark:text-white shadow-md transition-all duration-300">
+                        <svg id="themeIcon" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- Icon will be injected here by JS -->
+                        </svg>
+                    </button>
+                </div>
 
 
-                <div class="w-full mt-2 flex gap-2 items-center">
+              <div class="w-full p-1 px-4">
+                      <div class="w-full mt-2 flex gap-2 items-center">
                     <p class="text-left font-bold text-2xl">Login to your account</p>
                     <img src="./images/logstart.png" class="w-8 h-8" alt="">
                 </div>
 
                 <p class="text-gray-500 font-normal text-md ">Welcome back! Please enter your details.</p>
 
-               
+
 
                 <div class="w-full mt-2">
                     <label for="user Id" class="text-md font-medium">User ID</label>
                     <div class=" grid grid-cols-1">
-                        <input id="userId" type="number" name="user Id" placeholder="Enter your email" readonly  
+                        <input id="userId" type="number" name="user Id" placeholder="Enter your email" readonly
                             class="col-start-1 row-start-1 border-2 border-gray-400 outline-none block w-full rounded-md bg-white py-1.5 pr-3 pl-10 text-base  placeholder:text-gray-400  sm:pl-9 sm:text-sm/6 dark:bg-[var(--color-bg)] " />
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
@@ -126,6 +123,10 @@
                 </div>
 
                 <div class="w-full mt-2">
+                    <p>Create account? <span class="text-pink-500 cursor-pointer" onclick="signup()">Sign Up</span></p>
+                </div>
+
+                <div class="w-full mt-2">
                     <button onclick="login()"
                         class="w-full rounded-lg bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 px-6 py-2 text-white text-lg font-medium hover:opacity-90 transition-opacity duration-300">
                         Log in
@@ -133,15 +134,13 @@
 
                 </div>
 
-                <div class="w-full mt-2">
-                    <p>Create account? <span class="text-pink-500 cursor-pointer" onclick="signup()">Sign Up</span></p>
-                </div>
+              </div>
             </div>
         </div>
     </div>
 
     <script>
-        document.getElementById('userId').value='1234'
+        document.getElementById('userId').value = '1234'
 
         const mainContainer = document.getElementById('mainContainer');
 
@@ -212,11 +211,11 @@
            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />`;
         });
 
-        function login(){
-            window.location.href='/otp.html'
+        function login() {
+            window.location.href = '/otp.html'
         }
-        function signup(){
-            window.location.href='/register.html'
+        function signup() {
+            window.location.href = '/register.html'
         }
     </script>
 </body>
