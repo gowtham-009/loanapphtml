@@ -50,31 +50,19 @@
 
 
                 <div class="w-full mt-2 flex gap-2 items-center">
-                    <p class="text-left font-bold text-2xl">Create an account</p>
+                    <p class="text-left font-bold text-2xl">Login to your account</p>
                     <img src="./images/logstart.png" class="w-8 h-8" alt="">
                 </div>
 
-                <p class="text-gray-500 font-normal text-md ">Welcome! Please enter your details.</p>
+                <p class="text-gray-500 font-normal text-md ">Welcome back! Please enter your details.</p>
 
-                <div class="w-full mt-1">
-                    <label for="name" class="text-md font-medium">Name</label>
-                    <div class=" grid grid-cols-1">
-                        <input id="name" type="name" name="name" placeholder="Enter your name"
-                            class="col-start-1 row-start-1 border-2 border-gray-400 outline-none block w-full rounded-md bg-white py-1.5 pr-3 pl-10 text-base text-gray-900 placeholder:text-gray-400  sm:pl-9 sm:text-sm/6 dark:bg-[var(--color-bg)] " />
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor"
-                            class="pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-gray-400 sm:size-4">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                        </svg>
-                    </div>
-                </div>
+               
 
                 <div class="w-full mt-2">
-                    <label for="email" class="text-md font-medium">Email</label>
+                    <label for="user Id" class="text-md font-medium">User ID</label>
                     <div class=" grid grid-cols-1">
-                        <input id="email" type="email" name="email" placeholder="Enter your email"
-                            class="col-start-1 row-start-1 border-2 border-gray-400 outline-none block w-full rounded-md bg-white py-1.5 pr-3 pl-10 text-base text-gray-900 placeholder:text-gray-400  sm:pl-9 sm:text-sm/6 dark:bg-[var(--color-bg)] " />
+                        <input id="userId" type="number" name="user Id" placeholder="Enter your email" readonly value="1234 "
+                            class="col-start-1 row-start-1 border-2 border-gray-400 outline-none block w-full rounded-md bg-white py-1.5 pr-3 pl-10 text-base  placeholder:text-gray-400  sm:pl-9 sm:text-sm/6 dark:bg-[var(--color-bg)] " />
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
                             class="pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-gray-400 sm:size-4">
@@ -125,29 +113,29 @@
                                 </div>
 
                                 <!-- Label -->
-                                <div class="text-sm leading-6">
+                                <div class="text-sm leading-6 w-full flex justify-between">
                                     <span id="comments-description" class="text-gray-500 font-normal">
                                         Must be at least 8 characters
                                     </span>
+
+                                    <span class="text-md font-medium">Forget Password</span>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                 </div>
 
-
-
-
-
                 <div class="w-full mt-2">
-                    <button onclick="signup()"
+                    <button onclick="login()"
                         class="w-full rounded-lg bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 px-6 py-2 text-white text-lg font-medium hover:opacity-90 transition-opacity duration-300">
-                        Sign Up
+                        Log in
                     </button>
 
                 </div>
 
-
+                <div class="w-full mt-2">
+                    <p>Create account? <span class="text-pink-500 cursor-pointer" onclick="signup()">Sign Up</span></p>
+                </div>
             </div>
         </div>
     </div>
@@ -222,8 +210,11 @@
            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />`;
         });
 
+        function login(){
+            window.location.href='/otp.html'
+        }
         function signup(){
-            window.location.href='/login.html'
+            window.location.href='/register.html'
         }
     </script>
 </body>

@@ -59,14 +59,55 @@
 
                 <div class="flex gap-3 justify-center mt-3">
                     <input type="text" maxlength="1"
-                        class="otp-input w-12 h-12 text-center rounded-lg text-2xl border border-pink-500 bg-black focus:outline-none focus:ring-2 focus:ring-pink-400" />
+                        class="otp-input w-12 h-12 text-center rounded-lg text-2xl border border-pink-500 focus:outline-none  focus:ring-2 focus:ring-pink-400 bg-white dark:bg-[var(--color-bg)] " />
                     <input type="text" maxlength="1"
-                        class="otp-input w-12 h-12 text-center rounded-lg text-2xl border border-pink-500 bg-black focus:outline-none focus:ring-2 focus:ring-pink-400" />
+                        class="otp-input w-12 h-12 text-center rounded-lg text-2xl border border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white dark:bg-[var(--color-bg)]  " />
                     <input type="text" maxlength="1"
-                        class="otp-input w-12 h-12 text-center rounded-lg text-2xl border border-pink-500 bg-black focus:outline-none focus:ring-2 focus:ring-pink-400" />
+                        class="otp-input w-12 h-12 text-center rounded-lg text-2xl border border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white dark:bg-[var(--color-bg)]  " />
                     <input type="text" maxlength="1"
-                        class="otp-input w-12 h-12 text-center rounded-lg text-2xl border border-pink-500 bg-black focus:outline-none focus:ring-2 focus:ring-pink-400" />
+                        class="otp-input w-12 h-12 text-center rounded-lg text-2xl border border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white dark:bg-[var(--color-bg)]  " />
                 </div>
+
+                <div class="w-full p-1 mt-2">
+                    <div class="w-full p-1 mt-2 grid grid-cols-3 gap-2">
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">1</button>
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">2</button>
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">3</button>
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">4</button>
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">5</button>
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">6</button>
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">7</button>
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">8</button>
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">9</button>
+
+                        <!-- Spacer -->
+                        <div></div>
+
+                        <!-- 0 -->
+                        <button
+                            class="num-btn  bg-gray-200 dark:bg-[var(--color-bg)] border border-pink-500  py-3 rounded text-lg">0</button>
+
+                        <!-- Backspace -->
+                        <button id="backspaceBtn"
+                            class="bg-red-200 text-black dark:bg-red-800 dark:text-white hover:bg-red-300 dark:hover:bg-red-700 py-3 rounded text-lg">
+                            ←
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+
 
 
 
@@ -83,15 +124,18 @@
                 </div>
 
                 <div class="w-full mt-3">
-                    <p class="text-gray-500 font-normal text-md text-center">Didn't receive the email? <span class="font-medium ">Click to resend</span></p>
+                    <p class="text-gray-500 font-normal text-md text-center">Didn't receive the email? <span
+                            class="font-medium ">Click to resend</span></p>
                 </div>
 
-                <button type="button" class="px-2 py-2 w-full flex gap-2 justify-center mt-3" >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-</svg>
+                <button type="button" onclick="back()" class="px-2 py-2 w-full flex gap-2 justify-center mt-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                    </svg>
 
-Back to Login
+                    Back to Login
                 </button>
 
             </div>
@@ -149,23 +193,80 @@ Back to Login
         window.addEventListener('resize', setMainContainerHeight);
 
 
-     
 
 
-         const inputs = document.querySelectorAll('.otp-input');
-    inputs.forEach((input, index) => {
-      input.addEventListener('input', () => {
-        if (input.value && index < inputs.length - 1) {
-          inputs[index + 1].focus();
+
+        const inputs = document.querySelectorAll('.otp-input');
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                if (input.value && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !input.value && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+
+
+        const otpInputs = document.querySelectorAll('.otp-input');
+        const numberButtons = document.querySelectorAll('.num-btn');
+        const backspaceBtn = document.getElementById('backspaceBtn');
+
+        // Track current input index
+        let currentInputIndex = 0;
+
+        // Fill input on button click
+        numberButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const digit = button.textContent.trim();
+
+                if (currentInputIndex < otpInputs.length) {
+                    otpInputs[currentInputIndex].value = digit;
+                    currentInputIndex++;
+                    if (currentInputIndex < otpInputs.length) {
+                        otpInputs[currentInputIndex].focus();
+                    }
+                }
+            });
+        });
+
+        // Backspace functionality
+        backspaceBtn.addEventListener('click', () => {
+            if (currentInputIndex > 0 && otpInputs[currentInputIndex - 1].value) {
+                currentInputIndex--;
+                otpInputs[currentInputIndex].value = '';
+                otpInputs[currentInputIndex].focus();
+            }
+        });
+
+        // Sync typing with current index
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                if (input.value && index < otpInputs.length - 1) {
+                    currentInputIndex = index + 1;
+                    otpInputs[currentInputIndex].focus();
+                }
+            });
+
+            input.addEventListener('focus', () => {
+                currentInputIndex = index;
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !input.value && index > 0) {
+                    otpInputs[index - 1].focus();
+                    currentInputIndex = index - 1;
+                }
+            });
+        });
+
+        function back(){
+            window.location.href='/'
         }
-      });
-
-      input.addEventListener('keydown', (e) => {
-        if (e.key === 'Backspace' && !input.value && index > 0) {
-          inputs[index - 1].focus();
-        }
-      });
-    });
     </script>
 </body>
 
